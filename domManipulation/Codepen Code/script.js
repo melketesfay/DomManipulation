@@ -127,42 +127,22 @@ for(i of bodyElements.childNodes){
 
 */
 
+//Toggle background color of cards
 
+let card = document.querySelectorAll("#blog-entries .card");
 
-let card = document.querySelectorAll("#blog-entries")
-let cardparents = document.getElementsByClassName("cardparent")
-cardparents[0].style.backgroundColor = "green"
-console.log(cardparents)
-card.childNodes[0].style.backgroundColor = "red"
+card.forEach((e) => console.log(e));
 
-// card.forEach(e=> e.style.backgroundColor= "red")
+card.forEach((e) => (e.style.backgroundColor = "red"));
 
-// card[0].children.forEach(child=>{
-//     debugger;
-//     child.addEventListener("click", toggleMe(e))
-// })
+card.forEach((e) => {
+  e.addEventListener("click", toggleMe);
+});
 
-
-
-
-// function toggleMe(e){
-//     if(e.style.backgroundColor == "red"){
-//         e.style.backgroundColor = "white";
-//     }else if(e.style.backgroundColor == "white"){
-//         e.style.backgroundColor = "red";
-
-//     }
-
-    
-
-
-// }
-
- 
-
-
-
-
-
-
-
+function toggleMe() {
+  if (this.style.backgroundColor == "red") {
+    this.style.backgroundColor = "white";
+  } else if (this.style.backgroundColor == "white") {
+    this.style.backgroundColor = "red";
+  }
+}
