@@ -133,16 +133,16 @@ let card = document.querySelectorAll("#blog-entries .card");
 
 card.forEach((e) => console.log(e));
 
-card.forEach((e) => (e.style.backgroundColor = "red"));
+card.forEach((e) => (e.style.backgroundColor = "grey"));
 
 card.forEach((e) => {
   e.addEventListener("click", toggleMe);
 });
 
 function toggleMe() {
-  if (this.style.backgroundColor == "red") {
-    this.style.backgroundColor = "white";
-  } else if (this.style.backgroundColor == "white") {
+  if (this.style.backgroundColor === "grey") {
     this.style.backgroundColor = "red";
+  } else if (this.style.backgroundColor === "red") {
+    this.style.backgroundColor = "grey";
   }
 }
